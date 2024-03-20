@@ -30,7 +30,7 @@ const App = () => {
       {
         filteredArray.map((fruit, index) => (
         
-            <li>{fruit}</li>
+            <li key={index}>{fruit}</li>
          
         ))}
          </ul>
