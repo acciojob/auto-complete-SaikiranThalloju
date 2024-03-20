@@ -6,7 +6,7 @@ const App = () => {
   const fruits = ["apple", "banana", "cherry", "date", "elderberry", "fig"];
   const [input, setInput] = useState("");
   const [filteredArray, setFilteredArray] = useState([]);
-  const [flag, setFlag] = useState(false);
+  // const [flag, setFlag] = useState(false);
 
   function autoComplete() {
     const filteredFruits = fruits.filter((fruit) =>
@@ -26,13 +26,14 @@ const App = () => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-
-      {flag &&
+  <ul >
+      {
         filteredArray.map((fruit, index) => (
-          <ul key={index}>
+        
             <li>{fruit}</li>
-          </ul>
+         
         ))}
+         </ul>
     </div>
   );
 };
